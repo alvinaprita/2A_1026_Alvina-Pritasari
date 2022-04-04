@@ -9,54 +9,80 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: cobaListView(),
+      home: BelajarAppBar(),
     );
   }
 }
 
-class cobaListView extends StatelessWidget {
-  final List<String> gambar = [
-    "assets/images/1.jpg",
-    "assets/images/2.jpg",
-    "assets/images/5.jpg",
-    "assets/images/3.jpg",
-    "assets/images/4.jpg",
-  ];
-
-  final List<String> sub = [
-    'Soobin',
-    'Yeonjun',
-    'Heuningkai',
-    'Beomgyu',
-    'Taehyun',
-  ];
-
+class BelajarAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text("GALERI TXT", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold)),
+      body: DefaultTabController(
+        length: 2,
+        child: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              SliverAppBar(
+                expandedHeight: 200.0,
+                floating: false,
+                pinned: true,
+                flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  title: Text("Belajar SliverAppBar",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      )),
+                  background: Image(
+                    image: AssetImage('assets/images/gambar.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              SliverPersistentHeader(
+                pinned: true,
+                delegate: _SliverAppBarDelegate(
+                  TabBar(
+                    labelColor: Colors.black87,
+                    unselectedLabelColor: Colors.grey,
+                    tabs: [
+                      new Tab(icon: new Icon(Icons.audiotrack), text: "Songs"),
+                      new Tab(icon: new Icon(Icons.collections), text: "Gallery"),
+                    ],
+                  ),
+                ),
+              ),
+            ];
+          },
+          body: Center(
+            child: Text("BabyMetal di flutter"),
+          ),
         ),
-        backgroundColor: Colors.green[200],
-      ),
-      body: ListView.builder(
-        itemCount: gambar.length,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              title: ClipRRect(
-                  child: Image.asset(
-                gambar[index],
-                width: 350,
-                height: 200,
-                fit: BoxFit.cover,
-              )),
-              subtitle: Text(sub[index], style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 15)),
-            ),
-          );
-        },
       ),
     );
+  }
+}
+
+class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
+  _SliverAppBarDelegate(this._tabBar);
+
+  final TabBar _tabBar;
+
+  @override
+  double get minExtent => _tabBar.preferredSize.height;
+  @override
+  double get maxExtent => _tabBar.preferredSize.height;
+
+  @override
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return new Container(
+      child: _tabBar,
+    );
+  }
+
+  @override
+  bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
+    return false;
   }
 }
