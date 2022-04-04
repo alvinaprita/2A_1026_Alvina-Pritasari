@@ -49,14 +49,14 @@ class BelajarAppBar extends StatelessWidget {
                     tabs: [
                       new Tab(icon: new Icon(Icons.audiotrack), text: "Songs"),
                       new Tab(icon: new Icon(Icons.collections), text: "Gallery"),
+                      new Tab(icon: new Icon(Icons.collections), text: "Album"),
                     ],
                   ),
                 ),
               ),
             ];
           },
-          body: Center(
-            child: Text("Belajar AppBar di flutter"),
+          
           ),
         ),
       ),
@@ -71,6 +71,8 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
 
   @override
   double get minExtent => _tabBar.preferredSize.height;
+  @override
+  double get maxExtent => _tabBar.preferredSize.height;
   @override
   double get maxExtent => _tabBar.preferredSize.height;
 
