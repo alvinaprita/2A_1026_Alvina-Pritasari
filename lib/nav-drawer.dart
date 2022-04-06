@@ -8,7 +8,13 @@ class DrawerWidget extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           _drawerHeader(),
-          _drawerItem(icon: Icons.audiotrack, text: 'song', onTap: () => print('Tap My Files')),
+          _drawerItem(
+              icon: Icons.audiotrack,
+              text: 'song',
+              onTap: () {
+                DefaultTabController.of(context)?.animateTo(0);
+                Navigator.pop(context);
+              }),
           _drawerItem(icon: Icons.assignment_sharp, text: 'Album', onTap: () => print('Tap Shared menu')),
           _drawerItem(icon: Icons.offline_bolt, text: 'Offline', onTap: () => print('Tap Recent menu')),
           _drawerItem(icon: Icons.delete, text: 'Trash', onTap: () => print('Tap Trash menu')),
