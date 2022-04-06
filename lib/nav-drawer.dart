@@ -57,12 +57,10 @@ Widget _drawerHeader() {
       ClipOval(
         child: Image(image: AssetImage('assets/images/red.jpg'), fit: BoxFit.cover),
       ),
-      
     ],
     accountName: Text('RESOOMUSIC'),
     accountEmail: Text('hallo@belajarflutteralvina.com'),
   );
-              ),
 }
 
 Widget _drawerItem({IconData icon, String text, GestureTapCallback onTap}) {
