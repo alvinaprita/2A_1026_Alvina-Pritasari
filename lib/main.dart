@@ -14,7 +14,7 @@ class BelajarNavigationDrawer extends StatelessWidget {
         length: 3,
         child: Scaffold(
             appBar: AppBar(
-              backgroundColor: color.black
+              backgroundColor: Colors.black
               title: Text("RESOOMUSIC"),
               bottom: TabBar(
                 tabs: [
