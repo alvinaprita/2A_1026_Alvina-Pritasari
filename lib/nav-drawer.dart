@@ -63,6 +63,9 @@ Widget _drawerHeader() {
     accountName: Text('RESOOMUSIC'),
     accountEmail: Text('hallo@belajarflutteralvina.com'),
   );
+  decoration: BoxDecoration(
+                color: Colors.black,
+              ),
 }
 
 Widget _drawerItem({IconData icon, String text, GestureTapCallback onTap}) {
