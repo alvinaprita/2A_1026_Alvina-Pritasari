@@ -7,7 +7,6 @@ void main() {
     home: BelajarNavigationDrawer(),
   ));
 }
-
 class BelajarNavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,6 +14,7 @@ class BelajarNavigationDrawer extends StatelessWidget {
         length: 3,
         child: Scaffold(
             appBar: AppBar(
+              backgroundColor: color.black
               title: Text("RESOOMUSIC"),
               bottom: TabBar(
                 tabs: [
@@ -34,3 +34,4 @@ class BelajarNavigationDrawer extends StatelessWidget {
             )));
   }
 }
+  

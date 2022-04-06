@@ -50,18 +50,18 @@ class DrawerWidget extends StatelessWidget {
 Widget _drawerHeader() {
   return UserAccountsDrawerHeader(
     currentAccountPicture: ClipOval(
-      child: Image(image: AssetImage('assets/images/gambar.jpg'), fit: BoxFit.cover),
+      child: Image(image: AssetImage('assets/images/resoo.jpg'), fit: BoxFit.cover),
     ),
     otherAccountsPictures: [
       ClipOval(
-        child: Image(image: AssetImage('assets/images/gambar.jpg'), fit: BoxFit.cover),
+        child: Image(image: AssetImage('assets/images/resoo.jpg'), fit: BoxFit.cover),
       ),
       ClipOval(
-        child: Image(image: AssetImage('assets/images/gambar.jpg'), fit: BoxFit.cover),
+        child: Image(image: AssetImage('assets/images/resoo.jpg'), fit: BoxFit.cover),
       )
     ],
-    accountName: Text('Belajar Flutter'),
-    accountEmail: Text('hallo@belajarflutter.com'),
+    accountName: Text('RESOOMUSIC'),
+    accountEmail: Text('hallo@belajarflutteralvina.com'),
   );
 }
 
