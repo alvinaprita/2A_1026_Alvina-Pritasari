@@ -49,17 +49,15 @@ class DrawerWidget extends StatelessWidget {
 
 Widget _drawerHeader() {
   return UserAccountsDrawerHeader(
-    decoration: BoxDecoration(color: Colors.black,),
+    decoration: BoxDecoration(color: Colors.black),
     currentAccountPicture: ClipOval(
-      child: Image(image: AssetImage('assets/images/resoo.jpg'), fit: BoxFit.cover),
+      child: Image(image: AssetImage('assets/images/red.jpg'), fit: BoxFit.cover),
     ),
     otherAccountsPictures: [
       ClipOval(
-        child: Image(image: AssetImage('assets/images/resoo.jpg'), fit: BoxFit.cover),
+        child: Image(image: AssetImage('assets/images/red.jpg'), fit: BoxFit.cover),
       ),
-      ClipOval(
-        child: Image(image: AssetImage('assets/images/resoo.jpg'), fit: BoxFit.cover),
-      )
+      
     ],
     accountName: Text('RESOOMUSIC'),
     accountEmail: Text('hallo@belajarflutteralvina.com'),
