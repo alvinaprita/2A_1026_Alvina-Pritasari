@@ -85,35 +85,50 @@ Widget _drawerItem({IconData icon, String text, GestureTapCallback onTap}) {
 
 class songs extends StatelessWidget {
   final List lagu = [
-    "EXO - Monster ",
-    "Wayv - Take Off ",
-    "NCT2021 - Beautiful ",
-    "NCT 127 - Favorite ",
-    "NCT DREAM - BOOM ",
-    "Enhypen - Fever ",
-    "EXO - The Eve ",
-    "EXO - Lotto ",
-    "TXT - Anti Romantic ",
-    "Enhypen - Polaroid Love ",
-    "Treasure - Darari ",
+    " Monster ",
+    " Take Off ",
+    " Beautiful ",
+    " Favorite ",
+    " BOOM ",
+    " Fever ",
+    " The Eve ",
+    " Lotto ",
+    " Anti Romantic ",
+    " Polaroid Love ",
+    " Darari ",
   ];
+
+  final List<String> studio = [
+    'EXO',
+    'WayV',
+    'NCT 2021 ',
+    'NCT 127 ',
+    'NCT DREAM',
+    'Enhypen',
+    'EXO ',
+    'EXO ',
+    'TXT',
+    'Enhypen',
+    'Treasure',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
+        itemCount: lagu.length,
         itemBuilder: (context, index) {
           return Card(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(lagu[index],
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.black,
-                  )),
+            child: ListTile(
+              leading: Icon(
+                Icons.play_arrow,
+                color: Colors.black87,
+              ),
+              title: Text(lagu[index], style: TextStyle(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 17)),
+              subtitle: Text(studio[index]),
             ),
           );
         },
-        itemCount: lagu.length,
       ),
     );
   }
@@ -169,40 +184,58 @@ class album extends StatelessWidget {
 
 class offline extends StatelessWidget {
   final List lagu = [
-    "EXO - Monster ",
-    "EXO - Overdose ",
-    "EXO - Obsession ",
-    "Wayv - Take Off ",
-    "NCT2021 - Beautiful ",
-    "NCT 127 - Favorite ",
-    "NCT 127 - Stiker ",
-    "NCT - Lemonade ",
-    "NCT DREAM - BOOM ",
-    "Enhypen - Fever ",
-    "EXO - The Eve ",
-    "EXO - Lotto ",
-    "TXT - Anti Romantic ",
-    "Enhypen - Polaroid Love ",
-    "Treasure - Darari ",
-    "Treasure - Jikjin ",
+    " Monster ",
+    " Take Off ",
+    " Beautiful ",
+    " Favorite ",
+    " BOOM ",
+    " Fever ",
+    " The Eve ",
+    " Lotto ",
+    " Anti Romantic ",
+    " Polaroid Love ",
+    " Darari ",
+    " Glitch Mode ",
+    " Dont fight the feeling ",
+    " Dive Into You ",
+    " Kick Back ",
   ];
+
+  final List<String> studio = [
+    'EXO',
+    'WayV',
+    'NCT 2021 ',
+    'NCT 127 ',
+    'NCT DREAM',
+    'Enhypen',
+    'EXO ',
+    'EXO ',
+    'TXT',
+    'Enhypen',
+    'Treasure',
+    'NCT DREAM',
+    'EXO',
+    'NCT DREAM',
+    'WayV',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
+        itemCount: lagu.length,
         itemBuilder: (context, index) {
           return Card(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(lagu[index],
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.black,
-                  )),
+            child: ListTile(
+              leading: Icon(
+                Icons.play_arrow,
+                color: Colors.black87,
+              ),
+              title: Text(lagu[index], style: TextStyle(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 17)),
+              subtitle: Text(studio[index]),
             ),
           );
         },
-        itemCount: lagu.length,
       ),
     );
   }
