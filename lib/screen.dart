@@ -41,19 +41,28 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.grey, title: Text("ABOUT NCT")),
-      body: Center(
-        child: Container(
-          width: 600,
-          child: Text(
-            ' NCT merupakan boy grup besutan SM Entertainment. Nama mereka memiliki kepanjangan Neo Culture Technology. Sebuah istilkah yang diciptakan oleh pendiri SM Entertainment, Lee Soo Man. NCT berkonsep boy grup dengan jumlah member yang tak terhingga. Mereka pun terbagi ke dalam beberapa sub-unit yang tidak hanya beraktivitas di Korea Selatan saja. Melalui program pelatihan buatan SM Entertainment, SM Roookeis, NCT dipersiapkan sejak tahun 2013. Perekrutan member NCT dilakukan lewat beragam cara, mulai dari perekrutan jalanan, rekomendasi pribadi hingga lewat program SM Global Audition..',
-            maxLines: 4,
-            overflow: TextOverflow.clip,
-            style: TextStyle(fontSize: 15, color: Colors.black),
-          ),
+        appBar: AppBar(
+          title: Text('About NCT'),
         ),
-      ),
-    );
+        body: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            new Image.asset(
+              'assets/images/nctlogo.jpg',
+              width: 250,
+              height: 250,
+              fit: BoxFit.cover,
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(0, 12, 0, 12)),
+            new Text(
+              " NCT merupakan boy grup besutan SM Entertainment. Nama mereka memiliki kepanjangan Neo Culture Technology. NCT berkonsep boy grup dengan jumlah member yang tak terhingga. Mereka pun terbagi ke dalam beberapa sub-unit. NCT dipersiapkan sejak tahun 2013. Perekrutan member NCT dilakukan lewat program SM Global Audition.",
+              maxLines: 4,
+              overflow: TextOverflow.clip,
+              style: TextStyle(fontSize: 15, color: Colors.black),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ));
   }
 }
 
