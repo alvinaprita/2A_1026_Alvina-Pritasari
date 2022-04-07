@@ -48,7 +48,7 @@ class About extends StatelessWidget {
           child: Text(
             ' NCT merupakan boy grup besutan SM Entertainment. Nama mereka memiliki kepanjangan Neo Culture Technology. Sebuah istilkah yang diciptakan oleh pendiri SM Entertainment, Lee Soo Man. NCT berkonsep boy grup dengan jumlah member yang tak terhingga. Mereka pun terbagi ke dalam beberapa sub-unit yang tidak hanya beraktivitas di Korea Selatan saja. Melalui program pelatihan buatan SM Entertainment, SM Roookeis, NCT dipersiapkan sejak tahun 2013. Perekrutan member NCT dilakukan lewat beragam cara, mulai dari perekrutan jalanan, rekomendasi pribadi hingga lewat program SM Global Audition..',
             maxLines: 4,
-            overflow: TextOverflow.ellipsis,
+            overflow: TextOverflow.clip,
             style: TextStyle(fontSize: 15, color: Colors.black),
             textAlign: TextAlign.center,
           ),
@@ -63,7 +63,7 @@ class Portofolio extends StatelessWidget {
     "assets/images/nct.jpg",
     "assets/images/nct127.jpg",
     "assets/images/nctdream.jpg",
-    "assets/images/wayv.jpg ",
+    "assets/images/wayv.jpg"
   ];
 
   final List<String> sub = [
