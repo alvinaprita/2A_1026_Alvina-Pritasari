@@ -50,7 +50,6 @@ class About extends StatelessWidget {
             maxLines: 4,
             overflow: TextOverflow.clip,
             style: TextStyle(fontSize: 15, color: Colors.black),
-            textAlign: TextAlign.center,
           ),
         ),
       ),
@@ -77,6 +76,7 @@ class Portofolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.grey,
         title: Text('Portofolio NCT'),
       ),
       body: ListView.builder(
@@ -129,7 +129,7 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Contact Saya')),
+      appBar: AppBar(backgroundColor: Colors.grey, title: Text('Contact Saya')),
       body: ListView.builder(
         itemCount: kontak.length,
         itemBuilder: (context, index) {
