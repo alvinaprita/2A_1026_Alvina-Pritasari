@@ -136,7 +136,6 @@ class Contact extends StatelessWidget {
                 color: Colors.black87,
               ),
               title: Text(kontak[index], style: TextStyle(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 17)),
-              subtitle: Text(studio[index]),
             ),
           );
         },
