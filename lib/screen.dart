@@ -58,6 +58,7 @@ class About extends StatelessWidget {
 }
 
 class Portofolio extends StatelessWidget {
+  
   final List<String> Grup = [
     'assets/images/nct.jpg',
     'assets/images/nct127.jpg',
@@ -76,7 +77,7 @@ class Portofolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
+      body: ListView.builder(,
         itemCount: Grup.length,
         itemBuilder: (context, index) {
           return Card(
