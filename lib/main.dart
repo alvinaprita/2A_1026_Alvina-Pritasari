@@ -1,37 +1,46 @@
 import 'package:flutter/material.dart';
-import './nav-drawer.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: "belajardraweralvina.com",
-    home: BelajarNavigationDrawer(),
+    home: HomePage(),
   ));
 }
 
-class BelajarNavigationDrawer extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 3,
-        child: Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.black,
-              title: Text("RESOOMUSIC"),
-              bottom: TabBar(
-                tabs: [
-                  new Tab(icon: Icon(Icons.audiotrack), text: "Song"),
-                  new Tab(icon: Icon(Icons.assignment_sharp), text: "Album"),
-                  new Tab(icon: Icon(Icons.offline_bolt), text: "Offline")
-                ],
-              ),
-            ),
-            drawer: DrawerWidget(),
-            body: TabBarView(
-              children: <Widget>[
-                new songs(),
-                new album(),
-                new offline(),
-              ],
-            )));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Belajar Routing'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Route route = MaterialPageRoute(builder: (context) => AboutPage());
+            Navigator.push(context, route);
+          },
+          child: Text('Tap Untuk ke AboutPage'),
+        ),
+      ),
+    );
+  }
+}
+
+class AboutPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Tentang Aplikasi'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Kembali'),
+        ),
+      ),
+    );
   }
 }
