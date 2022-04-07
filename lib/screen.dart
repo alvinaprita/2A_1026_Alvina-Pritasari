@@ -25,9 +25,9 @@ class HomePage extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/about');
+                Navigator.pushNamed(context, '/porto');
               },
-              child: Text('Tap Portofolio'),
+              child: Text('Portofolio'),
             ),
           ],
         ),
@@ -60,14 +60,14 @@ class Portofolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Prtofolio saya'),
+        title: Text('Portofolio Saya'),
       ),
       body: Center(
         child: RaisedButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Klik Disini'),
+          child: Text('Kembali'),
         ),
       ),
     );
