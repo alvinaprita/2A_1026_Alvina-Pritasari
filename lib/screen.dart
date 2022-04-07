@@ -49,7 +49,7 @@ class About extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             new Image.asset(
-              'assetS/imageS/nctlogo.jpg',
+              'assets/images/nctlogo.jpg',
               width: 250,
               height: 250,
               fit: BoxFit.cover,
