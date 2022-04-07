@@ -56,7 +56,7 @@ class About extends StatelessWidget {
             ),
             Padding(padding: EdgeInsets.fromLTRB(0, 12, 0, 12)),
             new Text(
-              " NCT merupakan boy grup besutan SM Entertainment. Nama mereka memiliki kepanjangan Neo Culture Technology. NCT berkonsep boy grup dengan jumlah member yang tak terhingga.",
+              " NCT merupakan kepanjangan Neo Culture Technology. NCT berkonsep boy grup dengan jumlah member yang tak terhingga.",
               maxLines: 4,
               overflow: TextOverflow.clip,
               style: TextStyle(fontSize: 15, color: Colors.black),
