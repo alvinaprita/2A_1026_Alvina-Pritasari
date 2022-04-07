@@ -42,20 +42,21 @@ class About extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('About NCT'),
+          backgroundColor: Colors.grey,
+          title: Text('About'),
         ),
         body: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             new Image.asset(
-              'assets/images/nctlogo.jpg',
+              'assetS/imageS/nctlogo.jpg',
               width: 250,
               height: 250,
               fit: BoxFit.cover,
             ),
             Padding(padding: EdgeInsets.fromLTRB(0, 12, 0, 12)),
             new Text(
-              " NCT merupakan boy grup besutan SM Entertainment. Nama mereka memiliki kepanjangan Neo Culture Technology. NCT berkonsep boy grup dengan jumlah member yang tak terhingga. Mereka pun terbagi ke dalam beberapa sub-unit. NCT dipersiapkan sejak tahun 2013. Perekrutan member NCT dilakukan lewat program SM Global Audition.",
+              " NCT merupakan boy grup besutan SM Entertainment. Nama mereka memiliki kepanjangan Neo Culture Technology. NCT berkonsep boy grup dengan jumlah member yang tak terhingga.",
               maxLines: 4,
               overflow: TextOverflow.clip,
               style: TextStyle(fontSize: 15, color: Colors.black),
