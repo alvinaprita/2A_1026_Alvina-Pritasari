@@ -18,5 +18,4 @@ class RouteGenerator {
         return _errorRoute();
     }
   }
-
- 
+}
