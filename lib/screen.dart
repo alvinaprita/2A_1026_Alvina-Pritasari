@@ -49,7 +49,8 @@ class About extends StatelessWidget {
             ' NCT merupakan boy grup besutan SM Entertainment. Nama mereka memiliki kepanjangan Neo Culture Technology. Sebuah istilkah yang diciptakan oleh pendiri SM Entertainment, Lee Soo Man. NCT berkonsep boy grup dengan jumlah member yang tak terhingga. Mereka pun terbagi ke dalam beberapa sub-unit yang tidak hanya beraktivitas di Korea Selatan saja. Melalui program pelatihan buatan SM Entertainment, SM Roookeis, NCT dipersiapkan sejak tahun 2013. Perekrutan member NCT dilakukan lewat beragam cara, mulai dari perekrutan jalanan, rekomendasi pribadi hingga lewat program SM Global Audition..',
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.headline4,
+            style: TextStyle(fontSize: 15, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
       ),
@@ -58,38 +59,39 @@ class About extends StatelessWidget {
 }
 
 class Portofolio extends StatelessWidget {
-  
-  final List<String> Grup = [
-    'assets/images/nct.jpg',
-    'assets/images/nct127.jpg',
-    'assets/images/nctdream.jpg',
-    'assets/images/wayv.jpg',
+  final List<String> gambar = [
+    "assets/images/nct.jpg",
+    "assets/images/nct127.jpg",
+    "assets/images/nctdream.jpg",
+    "assets/images/wayv.jpg ",
   ];
 
-  final List<String> Judul = [
+  final List<String> sub = [
     'NCT',
     'NCT 127',
     'NCT DREAM',
-    'WayV',
+    'WayV'
   ];
 
   @override
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(,
-        itemCount: Grup.length,
+      appBar: AppBar(
+        title: Text('Portofolio NCT'),
+      ),
+      body: ListView.builder(
+        itemCount: gambar.length,
         itemBuilder: (context, index) {
           return Card(
             child: ListTile(
               title: ClipRRect(
                   child: Image.asset(
-                Grup[index],
-                width: 350,
+                gambar[index],
+                width: 300,
                 height: 200,
                 fit: BoxFit.cover,
               )),
-              subtitle: Text(Judul[index], style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 15)),
+              subtitle: Text(sub[index], style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 15)),
             ),
           );
         },
@@ -127,6 +129,7 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Contact Saya')),
       body: ListView.builder(
         itemCount: kontak.length,
         itemBuilder: (context, index) {
