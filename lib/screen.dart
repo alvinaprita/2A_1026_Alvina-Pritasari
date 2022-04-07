@@ -23,6 +23,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Tap Halaman lain'),
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/about');
+              },
+              child: Text('Tap Portofolio'),
+            ),
           ],
         ),
       ),
@@ -43,6 +49,25 @@ class AboutPage extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Text('Kembali'),
+        ),
+      ),
+    );
+  }
+}
+
+class Portofolio extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Prtofolio saya'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Klik Disini'),
         ),
       ),
     );
