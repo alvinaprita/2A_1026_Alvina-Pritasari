@@ -7,12 +7,12 @@ class RouteGenerator {
     // final args = settings.arguments;
 
     switch (settings.name) {
-      case '/':
-        return MaterialPageRoute(builder: (_) => HomePage());
       case '/about':
-        return MaterialPageRoute(builder: (_) => AboutPage());
+        return MaterialPageRoute(builder: (_) => About());
       case '/porto':
         return MaterialPageRoute(builder: (_) => Portofolio());
+      case '/Contact':
+        return MaterialPageRoute(builder: (_) => Contact());
       // return MaterialPageRoute(builder: (_) => AboutPage(args));
       default:
         return _errorRoute();
