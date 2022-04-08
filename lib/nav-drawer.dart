@@ -9,22 +9,36 @@ class DrawerWidget extends StatelessWidget {
         children: <Widget>[
           _drawerHeader(),
           _drawerItem(
-              icon: Icons.audiotrack,
-              text: 'song',
+              icon: Icons.arrow_forward_ios_outlined,
+              text: 'Profile',
               onTap: () {
                 DefaultTabController.of(context)?.animateTo(0);
                 Navigator.pop(context);
               }),
           _drawerItem(
               icon: Icons.assignment_sharp,
-              text: 'Album',
+              text: 'Portofolio',
               onTap: () {
                 DefaultTabController.of(context)?.animateTo(1);
                 Navigator.pop(context);
               }),
           _drawerItem(
-              icon: Icons.offline_bolt,
-              text: 'Offline',
+              icon: Icons.account_box_rounded,
+              text: 'Contact',
+              onTap: () {
+                DefaultTabController.of(context)?.animateTo(2);
+                Navigator.pop(context);
+              }),
+          _drawerItem(
+              icon: Icons.photo,
+              text: 'Galery',
+              onTap: () {
+                DefaultTabController.of(context)?.animateTo(3);
+                Navigator.pop(context);
+              }),
+          _drawerItem(
+              icon: Icons.settings,
+              text: 'Settings',
               onTap: () {
                 DefaultTabController.of(context)?.animateTo(2);
                 Navigator.pop(context);
@@ -49,17 +63,12 @@ class DrawerWidget extends StatelessWidget {
 
 Widget _drawerHeader() {
   return UserAccountsDrawerHeader(
-    decoration: BoxDecoration(color: Colors.black),
+    decoration: BoxDecoration(color: Colors.green[100]),
     currentAccountPicture: ClipOval(
-      child: Image(image: AssetImage('assets/images/red.jpg'), fit: BoxFit.cover),
+      child: Image(image: AssetImage('assets/images/iconkontak.jpg'), fit: BoxFit.cover),
     ),
-    otherAccountsPictures: [
-      ClipOval(
-        child: Image(image: AssetImage('assets/images/red.jpg'), fit: BoxFit.cover),
-      ),
-    ],
-    accountName: Text('RESOOMUSIC'),
-    accountEmail: Text('hallo@belajarflutteralvina.com'),
+    accountName: Text('ABOUT ME'),
+    accountEmail: Text('pritasarialvina01@gmail.com'),
   );
 }
 
@@ -83,7 +92,7 @@ Widget _drawerItem({IconData icon, String text, GestureTapCallback onTap}) {
   );
 }
 
-class songs extends StatelessWidget {
+class profile extends StatelessWidget {
   final List lagu = [
     " Monster ",
     " Take Off ",
@@ -134,7 +143,7 @@ class songs extends StatelessWidget {
   }
 }
 
-class album extends StatelessWidget {
+class portofolio extends StatelessWidget {
   final List<String> Album = [
     'assets/images/antiromantic.jpg',
     'assets/images/boom.jpg',
@@ -182,7 +191,7 @@ class album extends StatelessWidget {
   }
 }
 
-class offline extends StatelessWidget {
+class contact extends StatelessWidget {
   final List lagu = [
     " Monster ",
     " Take Off ",
