@@ -27,7 +27,7 @@ class DrawerWidget extends StatelessWidget {
                 );
               }),
           _drawerItem(
-              icon: Icons.contact_page,
+              icon: Icons.account_box_outlined,
               text: 'Contact Us',
               onTap: () {
                 Navigator.push(
@@ -42,7 +42,7 @@ class DrawerWidget extends StatelessWidget {
               "Keterangan",
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.black,
+                color: Colors.black54,
               ),
             ),
           ),
@@ -56,7 +56,7 @@ class DrawerWidget extends StatelessWidget {
                 );
               }),
           _drawerItem(
-              icon: Icons.collections,
+              icon: Icons.photo,
               text: 'Galery',
               onTap: () {
                 Navigator.push(
