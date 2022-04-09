@@ -85,7 +85,7 @@ Widget _drawerHeader() {
   );
 }
 
-Widget _drawerItem({IconData? icon, required String text, GestureTapCallback? onTap}) {
+Widget _drawerItem({IconData icon, required String text, GestureTapCallback onTap}) {
   return ListTile(
     title: Row(
       children: <Widget>[
