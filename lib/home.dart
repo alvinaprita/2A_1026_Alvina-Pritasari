@@ -106,13 +106,14 @@ class Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.grey[850],
         title: Text("Contact"),
       ),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Contact", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+            Text("Contact", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               child: Column(
@@ -133,7 +134,7 @@ class Contact extends StatelessWidget {
                   MaterialButton(
                     height: 60,
                     minWidth: double.infinity,
-                    color: Color(0xff333333),
+                    color: Colors.blue,
                     onPressed: () {},
                     child: Text("TERIMA",
                         style: TextStyle(
@@ -153,13 +154,13 @@ class Contact extends StatelessWidget {
 
 class Galery extends StatelessWidget {
   final List<String> foto = [
-    "asset/image/2.jpg",
-    "asset/image/3.jpg",
-    "asset/image/4.jpg",
-    "asset/image/5.jpg",
-    "asset/image/7.jpg",
-    "asset/image/8.jpg",
-    "asset/image/9.jpg"
+    "assets/images/2.jpg",
+    "assets/images/3.jpg",
+    "assets/images/4.jpg",
+    "assets/images/5.jpg",
+    "assets/images/7.jpg",
+    "assets/images/8.jpg",
+    "assets/images/9.jpg"
   ];
 
   final List<String> sub = [
@@ -176,6 +177,7 @@ class Galery extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.grey[850],
         title: Text("Galery"),
       ),
       body: GridView.builder(
@@ -206,84 +208,61 @@ class Galery extends StatelessWidget {
   }
 }
 
-class musik extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Container(
-      child: new Center(
-        child: new Column(
-          children: <Widget>[
-            new Padding(padding: new EdgeInsets.all(20.0)),
-            new Text(
-              "Musik",
-              style: new TextStyle(fontSize: 30.0),
-            ),
-            new Padding(padding: new EdgeInsets.all(20.0)),
-            new Icon(
-              Icons.audiotrack,
-              size: 90.0,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
 class Portofolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.grey[850],
         title: Text("Portofolio"),
       ),
       body: GridView.count(
         crossAxisCount: 2,
         children: <Widget>[
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/2.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
           ),
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/3.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
           ),
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/4.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
           ),
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/5.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
           ),
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/7.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
           ),
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/8.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
           ),
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/9.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
           ),
           new Image.asset(
-            'asset/image/rj.jpeg',
+            'assets/images/10.jpg',
             width: 200,
             height: 200,
             fit: BoxFit.cover,
@@ -299,14 +278,15 @@ class Profil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Profil"),
+          backgroundColor: Colors.grey[850],
+          title: Text("Profile"),
         ),
         body: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(padding: EdgeInsets.fromLTRB(0, 50, 0, 0)),
             new Image.asset(
-              'asset/image/wendy.jpg',
+              'assets/images/12.jpg',
               width: 250,
               height: 250,
               fit: BoxFit.cover,
@@ -333,7 +313,8 @@ class Setting extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Setting'),
+        backgroundColor: Colors.grey[850],
+        title: Text('Settings'),
       ),
       body: Column(children: [
         Center(
@@ -344,51 +325,6 @@ class Setting extends StatelessWidget {
           ),
         ),
       ]),
-    );
-  }
-}
-
-class gambar extends StatelessWidget {
-  final List<String> foto = [
-    "asset/image/rj.jpeg",
-    "asset/image/jn.jpeg",
-    "asset/image/hc.jpeg",
-    "asset/image/jm.jpeg"
-  ];
-
-  final List<String> sub = [
-    'DORAEMON',
-    'HAIKYUU',
-    'SUBASA',
-    'NARUTO'
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text("GALERI", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30)),
-        ),
-        backgroundColor: Colors.blue[200],
-      ),
-      body: ListView.builder(
-        itemCount: foto.length,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              title: ClipRRect(
-                  child: Image.asset(
-                foto[index],
-                width: 350,
-                height: 200,
-                fit: BoxFit.cover,
-              )),
-              subtitle: Text(sub[index], style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
-            ),
-          );
-        },
-      ),
     );
   }
 }
