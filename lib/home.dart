@@ -322,6 +322,7 @@ class Setting extends StatelessWidget {
             "SONG FOR ME\n\n,"
             "BILLIONAIRE \n"
             "(I wanna be a billionaire so frickin bad, Buy all of the things I never had,  I wanna be on the cover of Forbes magazine, Smiling next to Oprah and the Queen, every time I close my eyes, I see my name in shining lights yeahh, A different city every night, I swear the world better prepare, For when I'm a billionaire.)\n",
+            style: TextStyle(fontSize: 18, color: Colors.black),
           ),
         ),
       ]),
