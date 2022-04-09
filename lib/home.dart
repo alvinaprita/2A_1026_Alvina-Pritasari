@@ -10,7 +10,7 @@ class DrawerWidget extends StatelessWidget {
           _drawerHeader(),
           _drawerItem(
               icon: Icons.account_circle,
-              text: 'Profil',
+              text: 'Profile',
               onTap: () {
                 Navigator.push(
                   context,
@@ -72,8 +72,9 @@ class DrawerWidget extends StatelessWidget {
 
 Widget _drawerHeader() {
   return UserAccountsDrawerHeader(
+    decoration: BoxDecoration(color: Colors.grey[800]),
     currentAccountPicture: ClipOval(
-      child: Image(image: AssetImage("asset/image/wendy.jpg"), fit: BoxFit.cover),
+      child: Image(image: AssetImage("assets/images/6.jpg"), fit: BoxFit.cover),
     ),
     accountName: Text('ALVINA PRITASARI'),
     accountEmail: Text('pritasarialvina01@gmail.com'),
@@ -134,7 +135,7 @@ class Contact extends StatelessWidget {
                     minWidth: double.infinity,
                     color: Color(0xff333333),
                     onPressed: () {},
-                    child: Text("SUBMIT",
+                    child: Text("TERIMA",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -152,23 +153,23 @@ class Contact extends StatelessWidget {
 
 class Galery extends StatelessWidget {
   final List<String> foto = [
-    "asset/image/rj.jpeg",
-    "asset/image/jn.jpeg",
-    "asset/image/hc.jpeg",
-    "asset/image/jm.jpeg",
-    "asset/image/ch.jpeg",
-    "asset/image/js.jpeg",
-    "asset/image/mk.jpeg"
+    "asset/image/2.jpg",
+    "asset/image/3.jpg",
+    "asset/image/4.jpg",
+    "asset/image/5.jpg",
+    "asset/image/7.jpg",
+    "asset/image/8.jpg",
+    "asset/image/9.jpg"
   ];
 
   final List<String> sub = [
-    'NCT Dream ',
-    'NCT Dream.',
-    'NCT Dream ',
-    'NCT Dream ',
-    'NCT Dream.',
-    'NCT Dream .',
-    'NCT Dream '
+    'Sweetgirls 1 ',
+    'Sweetgirls 2',
+    'Sweetgirls 3',
+    'Sweetgirls 4',
+    'Sweetgirls 5',
+    'Sweetgirls 6',
+    'Sweetgirls 7'
   ];
 
   @override
