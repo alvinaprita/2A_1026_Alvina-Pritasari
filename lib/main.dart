@@ -16,6 +16,7 @@ class NavigationDrawer extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.grey[850],
             title: Text('Home'),
             flexibleSpace: Container(
               decoration: BoxDecoration(
@@ -27,7 +28,7 @@ class NavigationDrawer extends StatelessWidget {
           body: Container(
             alignment: Alignment.center,
             decoration: new BoxDecoration(
-              image: DecorationImage(image: AssetImage('asset/image/mv1.jpg'), fit: BoxFit.cover),
+              image: DecorationImage(image: AssetImage('assets/images/1.jpg'), fit: BoxFit.cover),
             ),
           ),
           drawer: DrawerWidget(),
