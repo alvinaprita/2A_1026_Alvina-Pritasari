@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './home.dart';
+import './nav-drawer.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -17,7 +17,7 @@ class NavigationDrawer extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.grey[850],
-            title: Text('Home'),
+            title: Text('My Try'),
             flexibleSpace: Container(
               decoration: BoxDecoration(
                   gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: <Color>[
