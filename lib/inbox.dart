@@ -1,88 +1,92 @@
 import 'package:flutter/material.dart';
+import './home.dart';
+
+
 
 class Inbox extends StatelessWidget {
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  final List nama = [
+    "Montse Hall",
+    "Albert Lives",
+    "Imma Mustard",
+    "Danny Pej",
+  ];
+  final List title = [
+    "Hello there!!",
+    "Important News",
+    "Weekend Meeting",
+    "Material Design",
+  ];
+  final List isi = [
+    "Has been a long time...",
+    "That is awesome!! Take a look...",
+    "Can you meet this weekend?...",
+    "There is the new widget libary...",
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Inbox"),
-        backgroundColor: Colors.grey[850],
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () => {},
-          ),
-        ],
-      ),
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            backgroundColor: Colors.white,
-            title: Material(
-              elevation: 8,
-              child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Today",
-                  border: InputBorder.none,
-                ),
+    return DefaultTabController(
+        length: 5,
+        child: Scaffold(
+          key: _scaffoldKey,
+          appBar: AppBar(
+            title:Text('Inbox'),
+            backgroundColor: Colors.grey[850],
               ),
+              body: Text("Today"),
             ),
-          ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              List.generate(
-                5,
-                (int i) {
-                  return _listItem(i);
+            actions: [
+              IconButton(
+                onPressed: () {
+                  _scaffoldKey.currentState.openEndDrawer();
                 },
-              ),
-            ),
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(
-          Icons.add,
-          color: Colors.red,
-        ),
-        backgroundColor: Colors.white,
-      ),
-    );
-  }
-
-  Widget _listItem(int i) {
-    return ListTile(
-      leading: Icon(Icons.account_circle, size: 50),
-      title: Column(
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                "shogo.yamada",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "8:59",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+                icon: Icon(Icons.search),
+              )
             ],
+            backgroundColor: Colors.greenAccent,
           ),
-          Text(
-            "Hello Everyone!!!",
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontWeight: FontWeight.bold),
+          body: ListView.builder(
+            itemBuilder: (context, index) {
+              return Card(
+                child: ListTile(
+                  leading: Icon(Icons.account_circle),
+                  title: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(nama[index], style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                          Text(
+                            "2h",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <Widget>[
+                        Text('' + isi[index]),
+                      ]),
+                    ],
+                  ),
+                  subtitle: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text('' + title[index]),
+                      Icon(Icons.star_border),
+                    ],
+                  ),
+                ),
+              );
+            },
+            itemCount: nama.length,
           ),
-        ],
-      ),
-      subtitle: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text("this is gmail app using flutter !!!!!"),
-          Icon(Icons.star_border)
-        ],
-      ),
+        )
     );
+
+
+
+
   }
 }
