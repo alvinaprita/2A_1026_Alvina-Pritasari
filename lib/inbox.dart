@@ -53,6 +53,7 @@ class Inbox extends StatelessWidget {
                   title: Column(
                     children: <Widget>[
                       Text('Today'),
+                      textAlign: TextAlign.left,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
