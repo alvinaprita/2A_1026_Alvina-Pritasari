@@ -31,7 +31,7 @@ class Inbox extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               List.generate(
-                100,
+                5,
                 (int i) {
                   return _listItem(i);
                 },
