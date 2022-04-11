@@ -14,27 +14,7 @@ class Inbox extends StatelessWidget {
           ),
         ],
       ),
-      
-          SliverList(
-            delegate: SliverChildListDelegate(
-              List.generate(
-                5,
-                (int i) {
-                  return _listItem(i);
-                },
-              ),
-            ),
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(
-          Icons.add,
-          color: Colors.red,
-        ),
-        backgroundColor: Colors.white,
-      ),
+      body: Text("Today"),
     );
   }
 
