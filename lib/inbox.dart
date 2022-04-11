@@ -14,20 +14,7 @@ class Inbox extends StatelessWidget {
           ),
         ],
       ),
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            backgroundColor: Colors.white,
-            title: Material(
-              elevation: 8,
-              child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Today",
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
+      
           SliverList(
             delegate: SliverChildListDelegate(
               List.generate(
