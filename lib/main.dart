@@ -1,44 +1,39 @@
 import 'package:flutter/material.dart';
-import './home.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    title: "Belajar Flutter",
-    home: NavigationDrawer(),
-  ));
+class Contohappbar extends StatefulWidget {
+  @override
+  _ContohappbarState createState() => _ContohappbarState();
 }
 
-class NavigationDrawer extends StatelessWidget {
+class _ContohappbarState extends State {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 4,
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.grey[850],
-            title: Text('My Try'),
-            flexibleSpace: Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: <Color>[
-                Colors.blue
-              ])),
-            ),
+    return Scaffold(
+      appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.supervised_user_circle),
+            onPressed: () {},
           ),
-          body: Container(
-            alignment: Alignment.center,
-            decoration: new BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/images/1.jpg'), fit: BoxFit.cover),
+          title: Text("Ini AppBar"),
+          actions: [
+            // action button
+            IconButton(
+              icon: Icon(Icons.add_circle),
+              onPressed: () {
+                //action
+              },
             ),
-          ),
-          drawer: DrawerWidget(),
-          //body: TabBarView(
-          //  children: <Widget>[
-          //    Contact(),
-          //    Portofolio(),
-          //    Kontak(),
-          //  ],
-          //),
-        ));
+            // action button
+            IconButton(
+              icon: Icon(Icons.add_location),
+              onPressed: () {
+                //action
+              },
+            ),
+          ]),
+      body: Center(
+        child: Text("ini body"),
+      ),
+    );
   }
 }
