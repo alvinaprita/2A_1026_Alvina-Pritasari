@@ -14,7 +14,40 @@ class Inbox extends StatelessWidget {
           ),
         ],
       ),
-      body: Text("Today"),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            backgroundColor: Colors.white,
+            title: Material(
+              elevation: 8,
+              child: TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Today",
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              List.generate(
+                5,
+                (int i) {
+                  return _listItem(i);
+                },
+              ),
+            ),
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          color: Colors.red,
+        ),
+        backgroundColor: Colors.white,
+      ),
     );
   }
 
@@ -37,7 +70,7 @@ class Inbox extends StatelessWidget {
             ],
           ),
           Text(
-            "Please Subscribe this channel!!!!! Please!!!!!",
+            "Hello Everyone!!!",
             overflow: TextOverflow.ellipsis,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
