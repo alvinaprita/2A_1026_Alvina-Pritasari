@@ -34,6 +34,7 @@ class Inbox extends StatelessWidget {
           key: _scaffoldKey,
           appBar: AppBar(
             title: Text('Inbox'),
+            backgroundColor: Colors.grey[850],
             actions: [
               IconButton(
                 onPressed: () {
