@@ -6,7 +6,13 @@ class Inbox extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Inbox"),
-        backgroundColor: Colors.pink[800],
+        backgroundColor: Colors.grey[850],
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () => {},
+          ),
+        ],
       ),
       body: CustomScrollView(
         slivers: <Widget>[
@@ -47,10 +53,7 @@ class Inbox extends StatelessWidget {
 
   Widget _listItem(int i) {
     return ListTile(
-      leading: CircleAvatar(
-        child: Text(i.toString()),
-        backgroundColor: Colors.green,
-      ),
+      leading: Icon(Icons.account_circle, size: 50),
       title: Column(
         children: <Widget>[
           Row(
