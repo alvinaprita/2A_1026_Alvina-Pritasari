@@ -52,8 +52,6 @@ class Inbox extends StatelessWidget {
                   leading: Icon(Icons.account_circle, size: 50),
                   title: Column(
                     children: <Widget>[
-                      Text('Today'),
-                      textAlign: TextAlign.left,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
