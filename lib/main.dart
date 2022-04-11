@@ -1,39 +1,45 @@
 import 'package:flutter/material.dart';
+import './home.dart';
 
-class Contohappbar extends StatefulWidget {
-  @override
-  _ContohappbarState createState() => _ContohappbarState();
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: "Belajar Flutter",
+    home: NavigationDrawer(),
+  ));
 }
 
-class _ContohappbarState extends State {
+class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.supervised_user_circle),
-            onPressed: () {},
+    return DefaultTabController(
+        length: 4,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.grey[850],
+            title: Text('My Try'),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () => {},
+              ),
+            ],
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: <Color>[
+                Colors.blue
+              ])),
+            ),
           ),
-          title: Text("Ini AppBar"),
-          actions: [
-            // action button
-            IconButton(
-              icon: Icon(Icons.add_circle),
-              onPressed: () {
-                //action
-              },
-            ),
-            // action button
-            IconButton(
-              icon: Icon(Icons.add_location),
-              onPressed: () {
-                //action
-              },
-            ),
-          ]),
-      body: Center(
-        child: Text("ini body"),
-      ),
-    );
+
+          drawer: DrawerWidget(),
+          //body: TabBarView(
+          //  children: <Widget>[
+          //    Contact(),
+          //    Portofolio(),
+          //    Kontak(),
+          //  ],
+          //),
+        ));
   }
 }
