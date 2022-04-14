@@ -1,45 +1,56 @@
 import 'package:flutter/material.dart';
-import './home.dart';
 
 void main() {
   runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    title: "Belajar Flutter",
-    home: NavigationDrawer(),
+    title: 'belajar form',
+    home: BelajarForm(),
   ));
 }
 
-class NavigationDrawer extends StatelessWidget {
+class BelajarForm extends StatefulWidget {
+  const BelajarForm({Key? key}) : super(key: key);
+
+  @override
+  _BelajarFormState createState() => _BelajarFormState();
+}
+
+class _BelajarFormState extends State<BelajarForm> {
+  final _formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 4,
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.grey[850],
-            title: Text('My Try'),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: () => {},
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Belajat Form'),
+      ),
+      body: Form(
+        key: _formkey,
+        child: Container(
+          padding: EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              TextFormField(
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(hintText: "contoh: 081xxxxxxxxx", labelText: "Nomor Telp", icon: Icon(Icons.phone), border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'No Telp kosong';
+                  }
+                  return null;
+                },
               ),
+              RaisedButton(
+                  child: Text(
+                    'Submit',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  color: Colors.blue,
+                  onPressed: () {
+                    if (_formkey.currentState!.validate()) {}
+                  })
             ],
-            flexibleSpace: Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: <Color>[
-                Colors.blue
-              ])),
-            ),
           ),
-
-          drawer: DrawerWidget(),
-          //body: TabBarView(
-          //  children: <Widget>[
-          //    Contact(),
-          //    Portofolio(),
-          //    Kontak(),
-          //  ],
-          //),
-        ));
+        ),
+      ),
+    );
   }
 }
