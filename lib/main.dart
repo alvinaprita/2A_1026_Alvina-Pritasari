@@ -27,7 +27,7 @@ class _BelajarFormState extends State<BelajarForm> {
         key: _formKey,
         child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(30.0),
             child: Column(
               children: [
                 Padding(
