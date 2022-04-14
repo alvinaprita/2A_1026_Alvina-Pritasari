@@ -32,7 +32,7 @@ class _BelajarFormState extends State<BelajarForm> {
                 keyboardType: TextInputType.phone,
                 decoration: InputDecoration(hintText: "contoh: 081xxxxxxxxx", labelText: "Nomor Telp", icon: Icon(Icons.phone), border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
                 validator: (value) {
-                  if (value!.isEmpty) {
+                  if (value.isEmpty) {
                     return 'No Telp kosong';
                   }
                   return null;
@@ -45,7 +45,7 @@ class _BelajarFormState extends State<BelajarForm> {
                   ),
                   color: Colors.blue,
                   onPressed: () {
-                    if (_formkey.currentState!.validate()) {}
+                    if (_formkey.currentState.validate()) {}
                   })
             ],
           ),
