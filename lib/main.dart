@@ -8,7 +8,7 @@ void main() {
 }
 
 class BelajarForm extends StatefulWidget {
-  const BelajarForm({Key? key}) : super(key: key);
+  const BelajarForm({Key key}) : super(key: key);
 
   @override
   _BelajarFormState createState() => _BelajarFormState();
