@@ -80,7 +80,7 @@ class _BelajarFormState extends State<Register> {
               ),
               RaisedButton(
                 child: Text(
-                  "register",
+                  "NEXT",
                   style: TextStyle(color: Colors.white),
                 ),
                 color: Colors.green,
