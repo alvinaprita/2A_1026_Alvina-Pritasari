@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'register.dart';
-import 'login_berhasil.dart';
+import 'daftar.dart';
+import 'loginberhasil.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -84,7 +84,7 @@ class _BelajarFormState extends State<BelajarForm> {
               FlatButton(
                 child: Text(
                   'register',
-                  style: TextStyle(color: Colors.black45),
+                  style: TextStyle(color: Colors.black54),
                 ),
                 onPressed: () {
                   Navigator.push(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'register.dart';
+import 'daftarberhasil.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -89,7 +89,7 @@ class _BelajarFormState extends State<Daftar> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return Registerberhasil();
+                        return DaftarBerhasil();
                       }),
                     );
                 },
