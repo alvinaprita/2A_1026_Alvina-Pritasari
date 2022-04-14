@@ -83,7 +83,7 @@ class _BelajarFormState extends State<BelajarForm> {
               ),
               FlatButton(
                 child: Text(
-                  'register',
+                  'Register',
                   style: TextStyle(color: Colors.black54),
                 ),
                 onPressed: () {
