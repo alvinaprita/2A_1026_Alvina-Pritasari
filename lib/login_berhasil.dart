@@ -16,7 +16,7 @@ class LoginBerhasil extends StatelessWidget {
         child: Container(
             width: 600,
             child: Text(
-              'Selamat Anda Berhasil Login',
+              'Congratulations you have successfully logged in',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headline4,
             )),

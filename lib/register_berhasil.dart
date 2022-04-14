@@ -4,12 +4,12 @@ import 'main.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: DaftarBerhasil(),
+      home: Registerberhasil(),
     ),
   );
 }
 
-class DaftarBerhasil extends StatelessWidget {
+class Registerberhasil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class DaftarBerhasil extends StatelessWidget {
             height: 350,
             alignment: Alignment.bottomCenter,
             child: Text(
-              'Selamat Anda Berhasil Daftar',
+              'Congratulations you have successfully registered',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headline4,
             ),
@@ -29,8 +29,8 @@ class DaftarBerhasil extends StatelessWidget {
           ),
           FlatButton(
             child: Text(
-              'kembali ke halaman login',
-              style: TextStyle(color: Colors.black54),
+              'back to login page',
+              style: TextStyle(color: Colors.black),
             ),
             onPressed: () {
               Navigator.push(

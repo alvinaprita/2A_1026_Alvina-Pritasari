@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'daftar.dart';
-import 'loginberhasil.dart';
+import 'register.dart';
+import 'login_berhasil.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,7 +20,8 @@ class _BelajarFormState extends State<BelajarForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Halaman Login"),
+        backgroundColor: Colors.green,
+        title: Text("Login Page"),
       ),
       body: Form(
         key: _formKey,
@@ -37,7 +38,7 @@ class _BelajarFormState extends State<BelajarForm> {
                 ),
                 validator: (String value) {
                   if (value.isEmpty) {
-                    return 'Email tidak boleh kosong';
+                    return 'Email cannot be empty';
                   }
                   return null;
                 },
@@ -47,13 +48,13 @@ class _BelajarFormState extends State<BelajarForm> {
               ),
               TextFormField(
                 decoration: new InputDecoration(
-                  labelText: "Isikan Password",
+                  labelText: "Enter Password",
                   icon: Icon(Icons.lock),
                   border: OutlineInputBorder(borderRadius: new BorderRadius.circular(5.0)),
                 ),
                 validator: (String value) {
                   if (value.isEmpty) {
-                    return 'Password tidak boleh kosong';
+                    return 'Password cannot be empty';
                   }
                   return null;
                 },
@@ -66,7 +67,7 @@ class _BelajarFormState extends State<BelajarForm> {
                   "Login",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.blue,
+                color: Colors.green,
                 onPressed: () {
                   if (_formKey.currentState.validate())
                     Navigator.push(
@@ -82,8 +83,8 @@ class _BelajarFormState extends State<BelajarForm> {
               ),
               FlatButton(
                 child: Text(
-                  'Daftar',
-                  style: TextStyle(color: Colors.black54),
+                  'register',
+                  style: TextStyle(color: Colors.black45),
                 ),
                 onPressed: () {
                   Navigator.push(

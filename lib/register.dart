@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'daftarberhasil.dart';
+import 'register.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,7 +19,8 @@ class _BelajarFormState extends State<Daftar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Halaman Daftar"),
+        backgroundColor: Colors.green,
+        title: Text("registration page"),
       ),
       body: Form(
         key: _formKey,
@@ -30,14 +31,14 @@ class _BelajarFormState extends State<Daftar> {
               // TextField(),
               TextFormField(
                 decoration: new InputDecoration(
-                  hintText: "contoh: Jejes",
-                  labelText: "Nama Lengkap",
+                  hintText: "example: sehun",
+                  labelText: "full name",
                   icon: Icon(Icons.people),
                   border: OutlineInputBorder(borderRadius: new BorderRadius.circular(5.0)),
                 ),
                 validator: (String value) {
                   if (value.isEmpty) {
-                    return 'Nama tidak boleh kosong';
+                    return 'Name cannot be empty';
                   }
                   return null;
                 },
@@ -53,7 +54,7 @@ class _BelajarFormState extends State<Daftar> {
                 ),
                 validator: (String value) {
                   if (value.isEmpty) {
-                    return 'Email tidak boleh kosong';
+                    return 'Email cannot be empty';
                   }
                   return null;
                 },
@@ -63,13 +64,13 @@ class _BelajarFormState extends State<Daftar> {
               ),
               TextFormField(
                 decoration: new InputDecoration(
-                  labelText: "Isikan Password",
+                  labelText: "Enter Password",
                   icon: Icon(Icons.lock),
                   border: OutlineInputBorder(borderRadius: new BorderRadius.circular(5.0)),
                 ),
                 validator: (String value) {
                   if (value.isEmpty) {
-                    return 'Password tidak boleh kosong';
+                    return 'Password cannot be empty';
                   }
                   return null;
                 },
@@ -79,16 +80,16 @@ class _BelajarFormState extends State<Daftar> {
               ),
               RaisedButton(
                 child: Text(
-                  "Daftar",
+                  "register",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.blue,
+                color: Colors.green,
                 onPressed: () {
                   if (_formKey.currentState.validate())
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return DaftarBerhasil();
+                        return Registerberhasil();
                       }),
                     );
                 },
