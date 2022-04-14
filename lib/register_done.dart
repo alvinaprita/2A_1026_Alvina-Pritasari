@@ -4,12 +4,12 @@ import 'main.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: Daftarberhasil(),
+      home: RegisterSuccessfull(),
     ),
   );
 }
 
-class Daftarberhasil extends StatelessWidget {
+class RegisterSuccessfull extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

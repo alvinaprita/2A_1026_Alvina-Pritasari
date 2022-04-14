@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'daftarberhasil.dart';
+import 'register_done.dart';
 
 void main() {
   runApp(MaterialApp(
     title: "Belajar Membuat Form ",
-    home: Daftar(),
+    home: Register(),
   ));
 }
 
-class Daftar extends StatefulWidget {
+class Register extends StatefulWidget {
   @override
   _BelajarFormState createState() => _BelajarFormState();
 }
 
-class _BelajarFormState extends State<Daftar> {
+class _BelajarFormState extends State<Register> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -89,7 +89,7 @@ class _BelajarFormState extends State<Daftar> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return DaftarBerhasil();
+                        return RegisterSuccessfull();
                       }),
                     );
                 },

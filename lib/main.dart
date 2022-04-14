@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'daftar.dart';
-import 'loginberhasil.dart';
+import 'register.dart';
+import 'login_done.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -73,7 +73,7 @@ class _BelajarFormState extends State<BelajarForm> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return LoginBerhasil();
+                        return LoginSuccessfull();
                       }),
                     );
                 },
@@ -90,7 +90,7 @@ class _BelajarFormState extends State<BelajarForm> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) {
-                      return Daftar();
+                      return Register();
                     }),
                   );
                 },

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: LoginBerhasil(),
+      home: LoginSuccessfull(),
     ),
   );
 }
 
-class LoginBerhasil extends StatelessWidget {
+class LoginSuccessfull extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
