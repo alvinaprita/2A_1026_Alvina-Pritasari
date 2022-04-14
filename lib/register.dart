@@ -20,7 +20,7 @@ class _BelajarFormState extends State<Register> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text("registration page"),
+        title: Text("Registration Page"),
       ),
       body: Form(
         key: _formKey,
